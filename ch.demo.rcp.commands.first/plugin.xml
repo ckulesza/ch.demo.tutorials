@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="ch.demo.rcp.commands.first.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="ch.demo.rcp.commands.first.Perspective"
+            id="ch.demo.rcp.commands.first.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="ch.demo.rcp.commands.first.application"
+            name="Command RCP">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="ch.demo.rcp.commands.first.commands.ExitHandler"
+            id="ch.demo.rcp.commands.first.commands.exit"
+            name="Exit">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="fileMenu"
+               label="File">
+            <command
+                  commandId="ch.demo.rcp.commands.first.commands.exit"
+                  label="Exit"
+                  style="push"
+                  tooltip="Beendet das Programm">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
