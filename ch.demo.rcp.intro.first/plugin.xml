@@ -24,10 +24,10 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="ch.demo.rcp.intro.first.application"
-            name="Hello RCP">
+            name="Display Test">
          <property
-               name="windowImages"
-               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+               name="appName"
+               value="Display Test">
          </property>
       </product>
    </extension>
@@ -65,6 +65,18 @@
                relative="org.eclipse.ui.editorss">
          </view>
       </perspectiveExtension>
+   </extension>
+   <extension
+         id="productFirst"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="ch.demo.rcp.intro.first.application"
+            name="Display Test">
+         <property
+               name="appName"
+               value="Display Test">
+         </property>
+      </product>
    </extension>
 
 </plugin>
