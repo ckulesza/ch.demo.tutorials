@@ -65,6 +65,16 @@
             </command>
          </toolbar>
       </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:ch.demo.rcp.intro.commands.toolbar.view">
+         <command
+               commandId="ch.demo.rcp.intro.commands.toolbar.hello"
+               icon="icons/alt_window_16.gif"
+               label="Say Hello"
+               style="push">
+         </command>
+      </menuContribution>
    </extension>
    <extension
          id="product"
