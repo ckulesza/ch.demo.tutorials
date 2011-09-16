@@ -39,6 +39,12 @@
             name="My View"
             restorable="true">
       </view>
+      <view
+            class="ch.demo.rcp.intro.first.View"
+            id="ch.demo.rcp.intro.first.view"
+            name="View"
+            restorable="true">
+      </view>
    </extension>
    <extension
          point="org.eclipse.ui.perspectiveExtensions">
@@ -46,6 +52,13 @@
             targetID="*">
          <view
                id="ch.demo.rcp.intro.first.myview"
+               minimized="false"
+               ratio="0.95f"
+               relationship="top"
+               relative="org.eclipse.ui.editorss">
+         </view>
+         <view
+               id="ch.demo.rcp.intro.first.view"
                minimized="false"
                ratio="0.95f"
                relationship="top"
